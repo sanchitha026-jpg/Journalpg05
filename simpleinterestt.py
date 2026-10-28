@@ -1,14 +1,14 @@
 
-import math
 
-def simple_interest(p, r, t):
-    si = (p * r * t) / 100
-    return si
+import sys
 
-p = float(input("Enter principal amount: "))
-r = float(input("Enter rate of interest: "))
-t = float(input("Enter time in years: "))
+def simple_interest(principal, interest, time):
+    return (principal * interest * time) / 100
 
-result = simple_interest(p, r, t)
+if __name__ == "__main__":
+    p = float(sys.argv[1])
+    r = float(sys.argv[2])
+    t = float(sys.argv[3])
 
-print("Simple Interest =", result)
+    si = simple_interest(p, r, t)
+    print("Simple Interest is:", si)
